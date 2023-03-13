@@ -15,7 +15,7 @@ $shutdown" | rofi -dmenu -i -p "Powermenu" \
 
 if [ "$selected_option" == "$lock" ]
 then
-  bash $HOME/.config/i3lock-color/lock.sh
+  betterlockscreen -l
 elif [ "$selected_option" == "$logout" ]
 then
   loginctl terminate-user `whoami`

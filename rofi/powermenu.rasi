@@ -11,12 +11,12 @@ configuration {
 
 * {
     border-colour:               var(selected);
-    background-colour:           var(background-transparent);
+    background-colour:           var(background);
     foreground-colour:           var(foreground);
     alternate-background:        var(selected);
 	alternate-foreground:		 var(background);
 
-    font:                        "Iosevka Nerd Font Mono 18";
+    font:                        "Iosevka Nerd Font Mono 16";
 }
 
 /*****----- Main Window -----*****/

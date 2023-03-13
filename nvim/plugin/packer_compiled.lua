@@ -115,6 +115,11 @@ _G.packer_plugins = {
     path = "/home/lauro/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "/home/lauro/.local/share/nvim/site/pack/packer/start/feline.nvim",
+    url = "https://github.com/feline-nvim/feline.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/lauro/.local/share/nvim/site/pack/packer/start/lualine.nvim",

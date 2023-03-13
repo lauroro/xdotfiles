@@ -39,6 +39,9 @@ theme.border_marked = "#91231c"
 -- Example:
 --theme.taglist_bg_focus = "#ff0000"
 
+
+theme.taglist_fg_occupied = "#f5e0dc"
+
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
@@ -55,6 +58,9 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 -- notification_[border_color|border_width|shape|opacity]
 --theme.notification_width = 200
 --theme.notification_height = 50
+theme.notification_border_width = 2
+theme.notification_bg = "#1E1E2E"
+theme.notification_fg = "#CDD6F4"
 
 
 -- You can add as many variables as

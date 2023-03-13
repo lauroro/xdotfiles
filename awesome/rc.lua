@@ -46,8 +46,12 @@ end
 
 
 
--- Autorun at startup
+-- Init
 awful.spawn.with_shell("bash ~/.config/awesome/scripts/autorun.sh")
+
+naughty.config.defaults.border_width = beautiful.notification_border_width
+naughty.config.defaults.bg = beautiful.notification_bg
+naughty.config.defaults.fg = beautiful.notification_fg
 
 
 -- {{{ Variable definitions
@@ -219,10 +223,12 @@ awful.screen.connect_for_each_screen(function(s)
             battery,
             wibox.widget.textbox(' | '),
             mytextclock,
+            wibox.widget.textbox(' '),
         },
     }
 end)
 -- }}}
+
 
 
 -- {{{ Key bindings
@@ -243,14 +249,18 @@ globalkeys = gears.table.join(
     awful.key({}, "XF86AudioMute",  function ()
         awful.util.spawn_with_shell("pactl set-sink-mute @DEFAULT_SINK@ toggle")
         update_audio() end, {description = "volume mute toggle", group = "multimedia"}),
-    awful.key({}, "XF86AudioMicMute",  function () awful.util.spawn_with_shell("pactl set-source-mute @DEFAULT_SOURCE@ toggle") end,
-              {description = "mic mute toggle", group = "multimedia"}),
+    awful.key({}, "XF86AudioMicMute",  function ()
+        awful.util.spawn_with_shell("pactl set-source-mute @DEFAULT_SOURCE@ toggle") end,
+        {description = "mic mute toggle", group = "multimedia"}),
     awful.key({}, "XF86MonBrightnessUp",  function ()
         awful.util.spawn_with_shell("brightnessctl s 10%+")
         update_brightness() end, {description = "brightness up", group = "multimedia"}),
     awful.key({}, "XF86MonBrightnessDown",  function () 
         awful.util.spawn_with_shell("brightnessctl s 10%-") 
         update_brightness() end, {description = "brightness down", group = "multimedia"}),
+     awful.key({  }, "Print", function()
+        awful.util.spawn_with_shell("maim $HOME/$(date)")
+        end, {description="screenshot", group="awesome"}),
 
     awful.key({ modkey,           }, "Right",
         function ()
