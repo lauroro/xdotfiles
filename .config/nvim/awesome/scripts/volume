@@ -1,0 +1,43 @@
+#!/bin/sh
+
+CURRENT=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -e '%' | sed 's/ //g' | cut -d "/" -f 2 | sed 's/%//')
+
+up() {
+  new=$(($CURRENT+5))
+  if [ $new -lt 100 ]; then
+    pactl set-sink-volume @DEFAULT_SINK@ $new%
+  else
+    pactl set-sink-volume @DEFAULT_SINK@ 100%
+  fi
+}
+
+down() {
+  new=$(($CURRENT-5))
+  if [ $new -gt 0 ]; then
+    pactl set-sink-volume @DEFAULT_SINK@ $new%
+  else
+    pactl set-sink-volume @DEFAULT_SINK@ 0%
+  fi
+}
+
+
+## Get audio Icon and level
+#TODO: different icons according to volume level, maybe
+get() {
+  MUTE="$(pactl get-sink-mute @DEFAULT_SINK@)"
+	if [[ "$MUTE" == "Mute: no" ]]; then
+  	echo "墳 $(pactl list sinks | grep '^[[:space:]]Volume:' | \
+ 	        head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,')%"
+	else
+  	echo "婢 Muted"
+	fi 
+}
+
+
+if [[ "$1" == "--up" ]];then
+  up
+elif [[ "$1" == "--down" ]];then
+  down
+elif [[ "$1" == "--get" ]];then
+  get
+fi

@@ -1,0 +1,8 @@
+#! /bin/sh
+
+SSID="$(nmcli -t -f active,ssid dev wifi | cut -d: -f2)"
+if [ -z $SSID ]; then
+	echo "󰤭 Offline"
+else
+	echo "󰤨 $SSID"
+fi

@@ -1,0 +1,2 @@
+doas echo "ignorepkg=sudo" >> /etc/xbps.d/10-ignore.conf 
+doas xbps-remove sudo 
