@@ -21,9 +21,6 @@ local plugins = {
   {'romgrk/barbar.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
   },
-  {'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
   "folke/which-key.nvim",
   "windwp/nvim-autopairs",
   "nvim-treesitter/nvim-treesitter",

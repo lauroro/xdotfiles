@@ -58,22 +58,6 @@ require 'colorizer'.setup()
 
 
 
--- Telescope
-require('telescope').setup {
-  defaults = {
-    -- config_key = value,
-    mappings = {
-      i = {
-        ["<C-h>"] = "which_key"
-      }
-    }
-  },
-  pickers = {},
-  extensions = {}
-}
-
-
-
 -- Which-key
 vim.o.timeout = true
 vim.o.timeoutlen = 300

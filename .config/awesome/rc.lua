@@ -116,7 +116,7 @@ mytextclock = wibox.widget.textclock( "%a %b %d [%R]" )
 
 -- Memory Widget
 local memory = wibox.widget{
-  widget = wibox.widget.textbox
+  widget = wibox.widget.textbox,
 }
 awful.widget.watch('bash -c "free -m | grep Mem: | awk \'{ print $3 }\'"', 3, function(self, stdout)
   memory:set_text(tonumber(stdout))
