@@ -1,7 +1,7 @@
 #! /bin/sh
 
-xinput set-prop 13 304 1
-xinput set-prop 13 283 1
+xinput set-prop 12 293 1
+xinput set-prop 12 285 1
 setxkbmap it
 
 betterlockscreen -u $HOME/.config/background

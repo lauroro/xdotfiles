@@ -1,14 +1,3 @@
--- Generals
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 0
-vim.opt.tabstop = 2
-vim.opt.mouse = 'a'
-vim.opt.number = true
-vim.opt.clipboard = 'unnamedplus'
-
-
-
 -- Catppuccin
 require("catppuccin").setup({
   flavour = "mocha",   -- latte, frappe, macchiato, mocha
@@ -109,10 +98,10 @@ mlspc.setup{
   ensure_installed = {
     -- check new lsp names with :LspInstall
     "lua_ls",
-    "rust_analyzer",
     "pyright",
     "bashls",
-    "html"
+    "html",
+    "clangd"
   },
 }
 mlspc.setup_handlers {
@@ -135,10 +124,10 @@ require'nvim-treesitter.configs'.setup {
   -- Automatically install missing parsers when entering buffer
   auto_install = true,
   -- List of parsers to ignore installing (for "all")
-  ignore_install = { "javascript" },
+  -- ignore_install = { "javascript" },
   highlight = {
     enable = true,
-    disable = { "javascript" },
+    -- disable = { "javascript" },
   },
 }
 

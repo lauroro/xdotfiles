@@ -1,6 +1,6 @@
 #! /bin/sh
 
-SSID="$(nmcli -t -f active,ssid dev wifi | cut -d: -f2)"
+SSID="$(iwctl station wlan0 show | grep "Connected network" | awk '{print $3}')"
 if [ -z $SSID ]; then
 	echo "󰤭 Offline"
 else

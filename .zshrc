@@ -13,7 +13,7 @@ compinit
 
 
 # Prompt
-PROMPT='%B%F{51}%n %~%b%f 
+PROMPT='%B%F{blue}%n %~%b%f 
  > '
 
 
