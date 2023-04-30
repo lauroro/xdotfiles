@@ -15,7 +15,7 @@ $shutdown" | rofi -dmenu -i -p "Powermenu" \
 
 if [ "$selected_option" == "$lock" ]
 then
-  betterlockscreen -l
+  bash $HOME/.config/awesome/scripts/lock
 elif [ "$selected_option" == "$exit" ]
 then
   echo -E "awesome.quit()" | awesome-client

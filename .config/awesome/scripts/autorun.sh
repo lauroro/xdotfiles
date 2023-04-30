@@ -1,8 +1,7 @@
 #! /bin/sh
 
-xinput set-prop 12 293 1
-xinput set-prop 12 285 1
+xinput set-prop 13 312 1
+xinput set-prop 13 285 1
 setxkbmap it
 
-betterlockscreen -u $HOME/.config/background
-xss-lock -- betterlockscreen -l &
+xss-lock -- bash $HOME/.config/awesome/scripts/lock &
