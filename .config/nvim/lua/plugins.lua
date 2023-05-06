@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
+  "rmehri01/onenord.nvim",
   { "catppuccin/nvim", name = "catppuccin" },
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
@@ -39,9 +40,4 @@ local plugins = {
 
 local opts = {}
 
-
 require("lazy").setup(plugins, opts)
-
-
-
-

@@ -8,12 +8,17 @@ require("catppuccin").setup({
   transparent_background = false,
   color_overrides = {
     mocha = {
-      base = "#0f0f0f",
-      mantle = "#0c0c0c",
+      base = "#181a1f",
+      mantle = "#13151a",
     },
   }
 })
 vim.cmd.colorscheme "catppuccin"
+
+
+
+-- OneNord
+--require('onenord').setup({})
 
 
 
