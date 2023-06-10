@@ -9,13 +9,15 @@ local theme = {}
 
 theme.font          = "Iosevka Nerd Font Mono 13"
 
-theme.bg_normal     = "#0c0c0c"
-theme.bg_focus      = "#89b4fa"
+
+--theme.bg_normal     = "#1d2021"
+theme.bg_normal     = "#101010"
+theme.bg_focus      = "#ebdbb2"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#7f849c"
+theme.fg_normal     = "#928374"
 theme.fg_focus      = "#0c0c0c"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
@@ -23,7 +25,7 @@ theme.fg_minimize   = "#ffffff"
 theme.useless_gap   = dpi(4)
 theme.border_width  = dpi(1)
 theme.border_normal = "#0c0c0c"
-theme.border_focus  = "#89b4fa"
+theme.border_focus  = "#ebdbb2"
 theme.border_marked = "#91231c"
 
 -- There are other variable sets
@@ -40,7 +42,7 @@ theme.border_marked = "#91231c"
 --theme.taglist_bg_focus = "#ff0000"
 
 
-theme.taglist_fg_occupied = "#f5e0dc"
+theme.taglist_fg_occupied = "#fbf1c7"
 
 -- Generate taglist squares:
 local taglist_square_size = dpi(0)
@@ -59,8 +61,8 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 --theme.notification_width = 200
 --theme.notification_height = 50
 theme.notification_border_width = 2
-theme.notification_bg = "#1E1E2E"
-theme.notification_fg = "#CDD6F4"
+theme.notification_bg = "#0c0c0c"
+theme.notification_fg = "#fbf1c7"
 
 
 -- You can add as many variables as

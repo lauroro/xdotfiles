@@ -1,14 +1,23 @@
 #!/bin/bash
 
+
+BLANK="#00000000"
+FG="#ebdbb2ff"
+BG="#101010ff"
+RING="#282828ff"
+
+
 i3lock \
--i $HOME/.config/background \
 --screen 1 \
 --clock \
 --indicator \
---ring-color "#1e1e1e66" \
---line-color "#00000000" \
---inside-color "#dfdfdf33" \
---separator-color "#ffffff00" \
+--color $BG \
+--ring-color $RING \
+--line-color $BLANK \
+--inside-color $BLANK \
+--separator-color $BLANK \
 --time-str "%R" \
---date-str "%A, %d-%m-%Y" \
-
+--date-str "%d-%m-%Y" \
+--time-color $FG \
+--date-color $FG \
+--radius 80

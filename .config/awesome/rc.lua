@@ -114,6 +114,13 @@ awful.layout.layouts = {
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock( "%a %b %d [%R]" )
 
+-- Calendar
+local month_calendar = awful.widget.calendar_popup.month({
+  spacing = 5,
+  margin = 5,
+})
+month_calendar:attach( mytextclock, "tr", {on_hover = false} )
+
 -- Memory Widget
 local memory = wibox.widget{
   widget = wibox.widget.textbox,

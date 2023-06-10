@@ -13,7 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 
 local plugins = {
-  "rmehri01/onenord.nvim",
+  "sainnhe/gruvbox-material",
+  --"nordtheme/vim",
+  "gbprod/nord.nvim",
   { "catppuccin/nvim", name = "catppuccin" },
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
