@@ -3,54 +3,6 @@ vim.cmd.colorscheme "gruvbox-material"
 
 
 
--- Nord
-require("nord").setup({
-  transparent = false, -- Enable this to disable setting the background color
-  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
-  diff = { mode = "bg" }, -- enables/disables colorful backgrounds when used in diff mode. values : [bg|fg]
-  borders = true, -- Enable the border between verticaly split windows visible
-  errors = { mode = "bg" }, -- Display mode for errors and diagnostics
-                            -- values : [bg|fg|none]
-  styles = {
-    -- Style to be applied to different syntax groups
-    -- Value is any valid attr-list value for `:help nvim_set_hl`
-    comments = { italic = false },
-    keywords = {},
-    functions = {},
-    variables = { bold = false },
-
-    -- To customize lualine/bufferline
-    bufferline = {
-      current = {},
-      modified = { italic = true },
-    },
-  },
-  --- You can override specific highlights to use other groups or a hex color
-  --- function will be called with all highlights and the colorScheme table
-  on_highlights = function(highlights, colors) end,
-})
---vim.cmd.colorscheme "nord"
-
-
--- Catppuccin
-require("catppuccin").setup({
-  flavour = "mocha",   -- latte, frappe, macchiato, mocha
-  background = {
-    light = "latte",
-    dark = "mocha",
-  },
-  transparent_background = false,
-  color_overrides = {
-    mocha = {
-      base = "#181a1f",
-      mantle = "#13151a",
-    },
-  }
-})
---vim.cmd.colorscheme "catppuccin"
-
-
-
 -- Nvim-tree
 vim.opt.termguicolors = true
 require("nvim-tree").setup()
@@ -69,10 +21,15 @@ require('lualine').setup {
 
 
 
--- Bufferline
-require 'bufferline'.setup {
-  auto_hide = true
+-- Barbar
+vim.g.barbar_auto_setup = false
+require'barbar'.setup {
+  auto_hide = true,
+  sidebar_filetypes = {
+    NvimTree = true,
+  },
 }
+
 
 
 
@@ -135,7 +92,9 @@ mlspc.setup{
     "pyright",
     "bashls",
     "html",
-    "clangd"
+    "clangd",
+    "gopls",
+    "tsserver"
   },
 }
 mlspc.setup_handlers {

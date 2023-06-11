@@ -14,15 +14,14 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   "sainnhe/gruvbox-material",
-  --"nordtheme/vim",
-  "gbprod/nord.nvim",
-  { "catppuccin/nvim", name = "catppuccin" },
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
   "NvChad/nvim-colorizer.lua",
   {'romgrk/barbar.nvim',
-    dependencies = 'nvim-tree/nvim-web-devicons',
+    dependencies = {'nvim-tree/nvim-web-devicons'},
+    init = function() vim.g.barbar_auto_setup = false end,
+    opts = {}
   },
   "folke/which-key.nvim",
   "windwp/nvim-autopairs",
@@ -34,7 +33,7 @@ local plugins = {
   -- completion
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
-  {"L3MON4D3/LuaSnip", version = "<CurrentMajor>.*"},
+  {"L3MON4D3/LuaSnip"},
   "rafamadriz/friendly-snippets",
   "saadparwaiz1/cmp_luasnip"
 }
