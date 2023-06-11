@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 CURRENT=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -e '%' | sed 's/ //g' | cut -d "/" -f 2 | sed 's/%//')
 

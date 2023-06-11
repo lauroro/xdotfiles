@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/bash
 
 SSID="$(iwctl station wlan0 show | grep "Connected network" | awk '{print $3}')"
 if [ -z $SSID ]; then
