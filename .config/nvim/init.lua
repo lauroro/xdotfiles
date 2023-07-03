@@ -5,6 +5,5 @@ require('options')
 
 
 -- requires: 
--- nodejs (npm) for lsp
--- C/C++ compiler
--- wget
+-- wget, npm, unzip, git
+-- [go, clang]

@@ -10,10 +10,9 @@ local theme = {}
 theme.font          = "Iosevka Nerd Font Mono 13"
 
 
---theme.bg_normal     = "#1d2021"
-theme.bg_normal     = "#101010"
-theme.bg_focus      = "#ebdbb2"
-theme.bg_urgent     = "#ff0000"
+theme.bg_normal     = "#1d2021"
+theme.bg_focus      = "#928374"
+theme.bg_urgent     = "#fe8019"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
@@ -24,9 +23,9 @@ theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(4)
 theme.border_width  = dpi(1)
-theme.border_normal = "#0c0c0c"
+theme.border_normal = "#1d2021"
 theme.border_focus  = "#ebdbb2"
-theme.border_marked = "#91231c"
+theme.border_marked = "#cc241d"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -53,6 +52,10 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
     taglist_square_size, theme.bg_focus
 )
 
+theme.taglist_shape_border_width = dpi(3)
+theme.taglist_shape_border_color = "#1d2021"
+theme.taglist_spacing = dpi(0)
+
 -- Variables set for theming notifications:
 -- notification_font
 -- notification_[bg|fg]
@@ -61,7 +64,7 @@ theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(
 --theme.notification_width = 200
 --theme.notification_height = 50
 theme.notification_border_width = 2
-theme.notification_bg = "#0c0c0c"
+theme.notification_bg = "#1d2021"
 theme.notification_fg = "#fbf1c7"
 
 

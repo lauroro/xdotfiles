@@ -12,6 +12,3 @@ setxkbmap it
 
 # Lockscreen
 xss-lock -- bash $HOME/.config/awesome/scripts/lock &
-
-# Picom
-#picom &

@@ -92,9 +92,10 @@ mlspc.setup{
     "pyright",
     "bashls",
     "html",
+    "tsserver",
+    "cssls",
     "clangd",
-    "gopls",
-    "tsserver"
+    "gopls"
   },
 }
 mlspc.setup_handlers {

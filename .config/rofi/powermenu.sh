@@ -1,9 +1,9 @@
 #!/bin/bash
  
 lock=" Lock"
-exit=" Exit"
-shutdown="襤 Poweroff"
-reboot=" Reboot"
+exit="󰗼 Exit"
+shutdown="󰐥 Poweroff"
+reboot=" Reboot"
 sleep=" Suspend"
  
 selected_option=$(echo "$lock

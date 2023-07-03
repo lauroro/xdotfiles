@@ -1,22 +1,20 @@
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "dmenu";
+	  modi:                       "dmenu";
     show-icons:                 true;
     display-dmenu:              "Powermenu :";
-	window-format:              "{w} · {c} · {t}";
+	  window-format:              "{w} · {c} · {t}";
 }
 
 /*****----- Global Properties -----*****/
-@import                          "colors.rasi"
+@import                          "theme.rasi"
 
 * {
     border-colour:               var(selected);
     background-colour:           var(background);
     foreground-colour:           var(foreground);
     alternate-background:        var(selected);
-	alternate-foreground:		 var(background);
-
-    font:                        "Iosevka Nerd Font Mono 16";
+	  alternate-foreground:		     var(background);
 }
 
 /*****----- Main Window -----*****/

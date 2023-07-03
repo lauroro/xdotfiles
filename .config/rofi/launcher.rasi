@@ -1,23 +1,21 @@
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun";
-  show-icons:                 true;
-  display-drun:               "Apps :";
-	drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
-	window-format:              "{w} · {c} · {t}";
+    modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "Apps :";
+    drun-display-format:        "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
+    window-format:              "{w} · {c} · {t}";
 }
 
 /*****----- Global Properties -----*****/
-@import                          "colors.rasi"
+@import                          "theme.rasi"
 
 * {
     border-colour:               var(selected);
     background-colour:           var(background);
     foreground-colour:           var(foreground);
     alternate-background:        var(selected);
-	alternate-foreground:		 var(background);
-
-    font:                        "Iosevka Nerd Font Mono 16";
+	  alternate-foreground:		     var(background);
 }
 
 /*****----- Main Window -----*****/

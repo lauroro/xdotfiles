@@ -9,28 +9,28 @@ BATICON=""
 
 if [[ "$BATSTATUS" == "Discharging" ]];then
   if [ "$BATVAL" -gt 90 ];then
-    BATICON=""
+    BATICON="󰁹"
   elif [ "$BATVAL" -gt 80 ];then
-    BATICON=""
+    BATICON="󰂂"
   elif [ "$BATVAL" -gt 70 ];then
-    BATICON=""
+    BATICON="󰂁"
   elif [ "$BATVAL" -gt 60 ];then
-    BATICON=""
+    BATICON="󰂀"
   elif [ "$BATVAL" -gt 50 ];then
-    BATICON=""
+    BATICON="󰁿"
   elif [ "$BATVAL" -gt 40 ];then
-    BATICON=""
+    BATICON="󰁾"
   elif [ "$BATVAL" -gt 30 ];then
-    BATICON=""
+    BATICON="󰁽"
   elif [ "$BATVAL" -gt 20 ];then
-    BATICON=""
+    BATICON="󰁼"
   elif [ "$BATVAL" -gt 10 ];then
-    BATICON=""
+    BATICON="󰁻"
   elif [ "$BATVAL" -gt 0 ];then
-    BATICON=""
+    BATICON="󰁺"
   fi
  else
-  BATICON=""
+  BATICON="󰂄"
 fi
 
 echo "$BATICON $BATVAL%"
