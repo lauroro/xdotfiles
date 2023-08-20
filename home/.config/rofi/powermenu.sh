@@ -15,10 +15,10 @@ $shutdown" | rofi -dmenu -i -p "Powermenu" \
 
 if [ "$selected_option" == "$lock" ]
 then
-  bash $HOME/.config/awesome/scripts/lock
+  bash ~/.config/bspwm/scripts/lock.sh
 elif [ "$selected_option" == "$exit" ]
 then
-  echo -E "awesome.quit()" | awesome-client
+  bspc quit
 elif [ "$selected_option" == "$shutdown" ]
 then
   loginctl poweroff

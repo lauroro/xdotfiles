@@ -1,9 +1,0 @@
-/* COLORS */
-
-* {
-  background:             #101010; 
-  background-alt:         #282828;
-  foreground:             #ebdbb2;
-  foreground-alt:         #0d0d0d;
-  selected:               #7c6f64;	
-}

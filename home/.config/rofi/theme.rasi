@@ -1,0 +1,11 @@
+/* THEME */
+
+* {
+    background:             #282828; 
+    background-alt:         #282828;
+    foreground:             #d4be98;
+    foreground-alt:         #1b1b1b;
+    selected:               #928374;
+
+    font:                   "Jetbrains Mono Nerd Font 14";
+}

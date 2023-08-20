@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Xinput
+ID="$(xinput list | grep Touchpad | awk '{print $5}' | tr -dc '0-9')"
+TAPPING="$(xinput list-props $ID | grep "libinput Tapping Enabled (" | awk '{print $4}' | tr -dc '0-9')"
+NATSCR="$(xinput list-props $ID | grep "libinput Natural Scrolling Enabled (" | awk '{print $5}' | tr -dc '0-9')"
+xinput set-prop $ID $TAPPING 1
+xinput set-prop $ID $NATSCR 1
+
+# Keymap
+setxkbmap it
+
+# Background processes
+sxhkd &
+dunst &
+xsetroot -cursor_name left_ptr &
+xss-lock -- bash ~/.config/bspwm/scripts/lock.sh &
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m polybar --reload &
+done
+
+# Set wallpaper
+feh --bg-scale ~/.config/wallpaper
+
+# Double borders
+#bash ~/.config/bspwm/scripts/double_borders.sh
+
+
+# BSPWM configs
+if [[ $(xrandr -q | grep "HDMI-2 connected") ]]; then
+  bspc monitor eDP-1 -d 1 2 3 4 5
+  bspc monitor HDMI-2 -d 6 7 8 9
+  bspc wm -O eDP1 HDMI-2
+else
+  bspc monitor eDP-1 -d 1 2 3 4 5
+  bspc monitor HDMI-2 --remove
+fi
+
+bspc config top_padding 34 
+
+bspc config focused_border_color            \#a89984
+bspc config normal_border_color             \#282828
+bspc config border_width                    2
+bspc config window_gap                      10
+bspc config focus_follows_pointer           true
+bspc config pointer_follows_monitor         true
+
+bspc config split_ratio                     0.5
+bspc config automatic_scheme                longest_side
+bspc config initial_polarity                second_child

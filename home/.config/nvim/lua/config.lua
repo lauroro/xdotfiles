@@ -89,13 +89,7 @@ mlspc.setup{
   ensure_installed = {
     -- check new lsp names with :LspInstall
     "lua_ls",
-    "pyright",
     "bashls",
-    "html",
-    "tsserver",
-    "cssls",
-    "clangd",
-    "gopls"
   },
 }
 mlspc.setup_handlers {
