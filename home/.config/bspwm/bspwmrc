@@ -28,15 +28,15 @@ feh --bg-scale ~/.config/wallpaper
 
 # BSPWM configs
 if [[ $(xrandr -q | grep "HDMI-2 connected") ]]; then
-  bspc monitor eDP-1 -d 1 2 3 4 5
-  bspc monitor HDMI-2 -d 6 7 8 9
-  bspc wm -O eDP1 HDMI-2
+  bspc monitor eDP1 -d 1 2 3 4 5
+  bspc monitor HDMI2 -d 6 7 8 9
+  bspc wm -O eDP1 HDMI2
 else
-  bspc monitor eDP-1 -d 1 2 3 4 5
-  bspc monitor HDMI-2 --remove
+  bspc monitor eDP1 -d 1 2 3 4 5
+  bspc monitor HDMI2 --remove
 fi
 
-bspc config top_padding 34 
+bspc config top_padding 32 
 
 bspc config focused_border_color            \#a89984
 bspc config normal_border_color             \#282828
