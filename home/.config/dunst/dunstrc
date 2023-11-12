@@ -186,7 +186,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/rofi -show dmenu -p dunst:
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/firefox -new-tab
@@ -270,13 +270,10 @@
     close_all = ctrl+shift+space
 
     # Redisplay last message(s).
-    # On the US keyboard layout "grave" is normally above TAB and left
-    # of "1". Make sure this key actually exists on your keyboard layout,
-    # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
+    history = mod4+n
 
     # Context menu.
-    context = ctrl+shift+grave
+    context = mod4+shift+n
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.

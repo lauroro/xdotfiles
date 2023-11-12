@@ -20,7 +20,7 @@ local function on_attach()
   vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, { buffer = 0 })
 end
 
-local servers = { "bashls", "lua_ls" }
+local servers = { "bashls", "lua_ls", "cssls", "gopls", "tsserver", "html", "jsonls"  }
 
 
 
