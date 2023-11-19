@@ -13,26 +13,28 @@ setxkbmap it
 # Background processes
 sxhkd &
 dunst &
+picom &
 xsetroot -cursor_name left_ptr &
-xss-lock -- bash ~/.config/bspwm/scripts/lock.sh &
+
+# Polybar
 for m in $(polybar --list-monitors | cut -d":" -f1); do
     MONITOR=$m polybar --reload &
 done
 
+# Lock screen
+xss-lock --transfer-sleep-lock -- bash ~/.config/bspwm/scripts/lock.sh &
+
 # Set wallpaper
 feh --bg-scale ~/.config/wallpaper
-
-# Double borders
-#bash ~/.config/bspwm/scripts/double_borders.sh
 
 
 # BSPWM configs
 if [[ $(xrandr -q | grep "HDMI-2 connected") ]]; then
-  bspc monitor eDP-1 -d 1 2 3 4 5
+  bspc monitor eDP1 -d 1 2 3 4 5
   bspc monitor HDMI-2 -d 6 7 8 9
-  bspc wm -O eDP-1 HDMI-2
+  bspc wm -O eDP1 HDMI-2
 else
-  bspc monitor eDP-1 -d 1 2 3 4 5
+  bspc monitor eDP1 -d 1 2 3 4 5
   bspc monitor HDMI-2 --remove
 fi
 

@@ -1,0 +1,39 @@
+theme = "gruvbox-material"
+
+[editor]
+line-number = "absolute"
+mouse = true
+scroll-lines = 1
+bufferline = "multiple"
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
+[editor.file-picker]
+hidden = true
+
+[editor.statusline]
+left = ["mode", "spinner", "read-only-indicator"]
+center = ["file-name", "file-modification-indicator"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.indent-guides]
+render = false
+character = "┊"
+skip-levels = 0
+
+[keys.normal]
+C-s = ":w"
+C-o = ":open ~/.config/helix/config.toml" 
+g = { a = "code_action" } 
+
+[keys.insert]
+C-s = ":w"
+"A-x" = "normal_mode"     # Maps Alt-X to enter normal mode

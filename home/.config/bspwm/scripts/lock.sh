@@ -13,6 +13,8 @@ COLOR="#32302f"
 
 i3lock \
 --image $IMAGE \
+--nofork \
+--composite \
 --tiling \
 --clock \
 --force-clock \
